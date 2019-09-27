@@ -1,0 +1,32 @@
+Description: >
+  An example stack that creates an S3 bucket.
+
+Parameters:
+  AppName:
+    Description: Name of the application.
+    MaxLength: 100
+    MinLength: 1
+    Type: String
+
+  Environment:
+    Description: Environment suffix for services
+    ConstraintDescription: Environment must be one of 'Dev' or 'Prod'
+    Default: 'Prod'
+    MinLength: 3
+    MaxLength: 4
+    Type: String
+    AllowedValues:
+      - 'Dev'
+      - 'Prod'
+
+Resources:
+  StackBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+
+Outputs:
+  StackBucket:
+    Description: A reference to the bucket containing CloudFormation stacks for the purpose of nesting stacks.
+    Value: !Ref StackBucket
+    Export:
+      Name: !Sub "${AppName}${Environment}StackBucket"

@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+  This is an example of a nested stack that passes common parameters to child stacks.
+
+Parameters:
+  AppName:
+    Description: Name of the application.
+    MaxLength: 100
+    MinLength: 1
+    Type: String
+
+  Environment:
+    Description: Environment suffix for services
+    ConstraintDescription: Environment must be one of 'Dev' or 'Prod'
+    Default: 'Prod'
+    MinLength: 3
+    MaxLength: 4
+    Type: String
+    AllowedValues:
+      - 'Dev'
+      - 'Prod'
+
+Resources:
+  ChildStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL:
+        Fn::Join:
+          - "/"
+          - - "https://s3.amazonaws.com"
+            - Fn::ImportValue: !Sub "${AppName}${Environment}StackBucket"
+            - "example.stack.yml"
+      Parameters:
+        AppName: !Ref AppName
+        Environment: !Ref Environment

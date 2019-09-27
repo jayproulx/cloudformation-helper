@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "AppName",
+    "ParameterValue": "CloudFormationHelper"
+  },
+  {
+    "ParameterKey": "Environment",
+    "ParameterValue": "${environment}"
+  }
+]

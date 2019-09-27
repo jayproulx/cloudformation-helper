@@ -18,7 +18,7 @@
     "es6"
   ],
   "author": "Jay Proulx <jay@proulx.info>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.537.0",
     "log4js": "^5.1.0",

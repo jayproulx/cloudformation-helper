@@ -1,6 +1,6 @@
 {
   "name": "cloudformation-helper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Automation helpers for structuring and maintaining applications with AWS CloudFormation stacks.",
   "main": "index.js",
   "repository": "https://github.com/jayproulx/cloudformation-helper",

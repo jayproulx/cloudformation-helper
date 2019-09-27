@@ -6,7 +6,7 @@
   "repository": "https://github.com/jayproulx/cloudformation-helper",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "generate-release"
+    "release": "generate-release; npm publish"
   },
   "bin": {
     "cfn-exports": "./bin/exports.js"

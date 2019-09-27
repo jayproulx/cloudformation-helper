@@ -20,7 +20,7 @@ parameters across your templates (such as Application Name and Environment, more
 # npm install --save-dev cloudformation-helper
 ```
 
-```ecmascript 6
+```JavaScript
 const { ApplicationParameters, CloudFormationHelper, AppExports } = require('cloudformation-helper');
 
 // see example.parameters.json which can also contain tokens that can be programmatically populated later

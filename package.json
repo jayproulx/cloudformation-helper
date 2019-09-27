@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "Automation helpers for structuring and maintaining applications with AWS CloudFormation stacks.",
   "main": "index.js",
+  "repository": "https://github.com/jayproulx/cloudformation-helper",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "generate-release"
   },
   "bin": {
     "cfn-exports": "./bin/exports.js"
@@ -24,5 +26,8 @@
   },
   "engines": {
     "node": ">=0.12"
+  },
+  "devDependencies": {
+    "generate-release": "^1.1.1"
   }
 }

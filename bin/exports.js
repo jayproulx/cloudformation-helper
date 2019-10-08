@@ -33,6 +33,6 @@ appExports.fetch(argv.appName, argv.environment).then((exports) => {
 
         console.log(formatted);
     } else {
-        exports.write(argv.output, argv.pretty);
+        appExports.write(argv.output, argv.pretty);
     }
 });

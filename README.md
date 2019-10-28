@@ -1,6 +1,6 @@
 # CloudFormation Helper
 
-version: 0.0.8 
+version: 0.0.9 
 
 Providing the boiler plate for your AWS Application CloudFormation templates.
 

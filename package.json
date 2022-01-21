@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.537.0",
-    "log4js": "^5.1.0",
+    "log4js": "^6.4.0",
     "yargs": "^14.0.0"
   },
   "engines": {
